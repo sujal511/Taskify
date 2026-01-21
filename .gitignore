@@ -1,0 +1,46 @@
+# Sensitive configuration files
+config/database.php
+
+# Log files
+logs/*.log
+logs/app.log
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Debug and test files (optional - you might want to keep these)
+debug.php
+simple_test.php
+test_*.php
+debug_users.php
+init_database.php
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# PHP specific
+vendor/
+composer.lock
+
+# Backup files
+*.bak
+*.backup
+
+# Cache files
+cache/
+tmp/
