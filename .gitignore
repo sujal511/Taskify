@@ -10,12 +10,22 @@ logs/app.log
 *.temp
 *~
 
-# Debug and test files (optional - you might want to keep these)
+# Debug and test files
 debug.php
 simple_test.php
 test_*.php
 debug_users.php
 init_database.php
+
+# Setup and migration scripts (potentially sensitive)
+migrate_database.php
+setup_production.php
+git-setup-commands.md
+
+# Alternative/backup files
+index_complex.php
+*.bak
+*.backup
 
 # IDE and editor files
 .vscode/
@@ -36,10 +46,6 @@ Thumbs.db
 # PHP specific
 vendor/
 composer.lock
-
-# Backup files
-*.bak
-*.backup
 
 # Cache files
 cache/
