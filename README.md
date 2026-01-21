@@ -45,7 +45,7 @@ A collaborative web-based task management system that allows multiple users to w
 ## 📁 Project Structure
 
 ```
-progress-tracker/
+taskify/
 ├── 📂 api/                 # REST API endpoints
 │   ├── create_task.php
 │   ├── get_tasks.php
@@ -55,7 +55,6 @@ progress-tracker/
 │   └── js/script.js
 ├── 📂 config/              # Configuration files
 │   ├── config.php
-│   ├── database.php
 │   └── database.sample.php
 ├── 📂 database/            # Database schema and migrations
 │   ├── schema.sql
@@ -66,11 +65,18 @@ progress-tracker/
 ├── 📂 pages/               # Application pages
 │   └── dashboard.php
 ├── 📂 error_pages/         # Custom error pages
-├── 📂 logs/                # Application logs
-├── index.php               # Login page
-├── register.php            # User registration
-├── logout.php              # Logout functionality
-└── setup_production.php    # Production setup script
+│   ├── 404.html
+│   ├── 500.html
+│   └── 503.html
+├── 📄 index.php            # Login page
+├── 📄 register.php         # User registration
+├── 📄 logout.php           # Logout functionality
+├── 📄 README.md            # Project documentation
+├── 📄 LICENSE              # MIT License
+├── 📄 CONTRIBUTING.md      # Contribution guidelines
+├── 📄 FEATURES.md          # Detailed features
+├── 📄 DEPLOYMENT.md        # Deployment guide
+└── 📄 .gitignore           # Git exclusions
 ```
 
 ## 🚀 Quick Start
@@ -84,17 +90,17 @@ progress-tracker/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/progress-tracker.git
-   cd progress-tracker
+   git clone https://github.com/sujal511/Taskify.git
+   cd Taskify
    ```
 
 2. **Database Setup**
    ```sql
-   CREATE DATABASE progress_tracker;
+   CREATE DATABASE taskify;
    ```
    Then import the schema:
    ```bash
-   mysql -u your_username -p progress_tracker < database/schema.sql
+   mysql -u your_username -p taskify < database/schema.sql
    ```
 
 3. **Configuration**
@@ -104,19 +110,20 @@ progress-tracker/
    Edit `config/database.php` with your database credentials:
    ```php
    define('DB_HOST', 'localhost');
-   define('DB_NAME', 'progress_tracker');
+   define('DB_NAME', 'taskify');
    define('DB_USER', 'your_username');
    define('DB_PASS', 'your_password');
    ```
 
 4. **Set Permissions**
    ```bash
+   mkdir logs
    chmod 755 logs/
    chmod 644 config/database.php
    ```
 
 5. **Access the Application**
-   - Navigate to `http://localhost/progress-tracker/`
+   - Navigate to `http://localhost/Taskify/`
    - Default login: `admin` / `admin123`
    - **⚠️ Change the default password immediately!**
 
@@ -170,10 +177,10 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🆘 Support
 
 If you encounter any issues:
-1. Check the [Issues](https://github.com/yourusername/progress-tracker/issues) page
-2. Run the setup script: `setup_production.php`
-3. Check the logs in the `logs/` directory
-4. Ensure your PHP and MySQL versions meet requirements
+1. Check the [Issues](https://github.com/sujal511/Taskify/issues) page
+2. Check the database connection using the sample configuration
+3. Ensure your PHP and MySQL versions meet requirements
+4. Verify file permissions are set correctly
 
 ## 🙏 Acknowledgments
 
